@@ -45,7 +45,7 @@ public class Email extends Activity implements View.OnClickListener {
                 + ".  Welp, thats all I wanted to chit-chatter about, oh and"
                 + out
                 + ".  Oh also if you get bored you should check out www.mybringback.com"
-                + '\n' + "PS. I think I love you...    ";
+                + '\n' + "PS. I think I love you..    ";
         Intent emailIntent = new Intent(Intent.ACTION_SEND);
         emailIntent.putExtra(Intent.EXTRA_EMAIL, emailaddress);
         emailIntent.putExtra(Intent.EXTRA_SUBJECT, "I hate you");
