@@ -3,9 +3,10 @@ import android.app.Activity;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.view.View;
 
 
-public class Splash extends Activity{
+public class Splash extends Activity implements View.OnClickListener{
 
     //gLocals
     MediaPlayer ourSong;
@@ -39,5 +40,10 @@ public class Splash extends Activity{
         super.onPause();
         ourSong.release(); //Releases Music
         finish(); //Closes Activity.
+    }
+
+    @Override
+    public void onClick(View view) {
+
     }
 }
