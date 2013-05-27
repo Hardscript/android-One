@@ -12,7 +12,7 @@ import android.widget.ListView;
 public class Menu extends ListActivity {
 
     //gLocals
-    String classes[] = { "MainActivity", "TextPlay", "Email", "example3", "example4", "example5" };
+    String classes[] = { "MainActivity", "TextPlay", "Email", "Camera", "example4", "example5" };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
