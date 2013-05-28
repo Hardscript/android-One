@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 
 
-public class Splash extends Activity implements View.OnClickListener{
+public class SplashScreen extends Activity implements View.OnClickListener{
 
     //gLocals
     MediaPlayer ourSong;
@@ -16,14 +16,14 @@ public class Splash extends Activity implements View.OnClickListener{
         setContentView(R.layout.splash);
 
         //BackGround Music
-        ourSong = MediaPlayer.create(Splash.this, R.raw.kalimba);
+        ourSong = MediaPlayer.create(SplashScreen.this, R.raw.kalimba);
         ourSong.start();
 
         //Timer Thread.
         Thread timer = new Thread(){
           public void run(){
               try{
-                sleep(5000); //Pauses Splash screen for 5 seconds.
+                sleep(5000); //Pauses SplashScreen screen for 5 seconds.
               }catch(InterruptedException e){
                 e.printStackTrace();
               }finally {

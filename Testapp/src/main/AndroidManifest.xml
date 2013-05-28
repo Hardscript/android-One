@@ -10,18 +10,42 @@
         android:targetSdkVersion="17" />
 
     <uses-permission
-            android:name="android.permission.SET_WALLPAPER"/>
+            android:name="android.permission.SET_WALLPAPER"
+            />
 
+    <uses-permission
+            android:name="android.permission.RECEIVE_BOOT_COMPLETED"
+            />
+    
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
 
+        //Service
+        <service
+            android:name=".MyService"
+            android:label="My Service">
+            <intent-filter>
+               <action android:name=".MyService"/>
+            </intent-filter>
+        </service>
+
+        //Receiver
+        <receiver
+                android:name=".StartMyServiceAtBootReceiver"
+                android:enabled="true"
+                android:exported="true"
+                android:label="StartMyServiceAtBootReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
 
         //Splash Screen
         <activity
-                android:name="au.com.advproj.testapp.Splash"
+                android:name=".SplashScreen"
                 android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -31,7 +55,7 @@
 
         //Menu
         <activity
-                android:name="au.com.advproj.testapp.Menu"
+                android:name=".Menu"
                 android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.Menu" />
@@ -41,19 +65,19 @@
 
         //MainActivity
         <activity
-                android:name="au.com.advproj.testapp.MainActivity"
+                android:name=".MainActivity"
                 android:label="@string/app_name" >
         </activity>
 
         //TextPlay
         <activity
-                android:name="au.com.advproj.testapp.TextPlay"
+                android:name=".TextPlay"
                 android:label="@string/app_name" >
         </activity>
 
         //Camera
         <activity
-                android:name="au.com.advproj.testapp.Camera"
+                android:name=".Camera"
                 android:label="@string/app_name"
                 android:screenOrientation="portrait">
         </activity>
