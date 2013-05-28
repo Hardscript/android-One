@@ -88,5 +88,17 @@
                 android:label="@string/app_name" >
         </activity>
 
+        //Get
+        <activity
+                android:name=".Data"
+                android:label="@string/app_name" >
+        </activity>
+
+        //Send
+        <activity
+                android:name=".OpenedClass"
+                android:label="@string/app_name" >
+        </activity>
+
     </application>
 </manifest>

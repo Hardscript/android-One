@@ -23,7 +23,7 @@ public class SplashScreen extends Activity implements View.OnClickListener{
         Thread timer = new Thread(){
           public void run(){
               try{
-                sleep(5000); //Pauses SplashScreen screen for 5 seconds.
+                sleep(1000); //Pauses SplashScreen screen for 5 seconds.
               }catch(InterruptedException e){
                 e.printStackTrace();
               }finally {

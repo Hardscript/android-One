@@ -9,32 +9,40 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="New Text"
-            android:id="@+id/tvQuestion" android:layout_gravity="left|center_vertical"/>
+            android:id="@+id/tvQuestion"/>
 
     <RadioGroup
             android:layout_width="wrap_content"
-            android:layout_height="fill_parent" android:layout_gravity="left|center_vertical">
+            android:layout_height="wrap_content"
+            android:id="@+id/rgAnswers">
         <RadioButton
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="New RadioButton"
-                android:id="@+id/radioButton"/>
+                android:text="Crazy"
+                android:id="@+id/rCrazy"/>
         <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="New RadioButton"
-                android:id="@+id/radioButton2" android:layout_gravity="left|center_vertical"/>
+                android:text="Super"
+                android:id="@+id/rSuper" />
         <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="New RadioButton"
-                android:id="@+id/radioButton3" android:layout_gravity="left|center_vertical"/>
+                android:text="Both"
+                android:id="@+id/rBoth" />
     </RadioGroup>
+
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Return"
+            android:id="@+id/bReturn"/>
 
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="New Text"
-            android:id="@+id/textView2" android:layout_gravity="left|center_vertical"/>
+            android:id="@+id/tvText" />
+
 
 </LinearLayout>

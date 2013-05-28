@@ -17,8 +17,8 @@ import java.io.InputStream;
 
 public class Camera extends Activity implements View.OnClickListener {
 
-    ImageButton ib;
-    Button b;
+    Button bTakePic;
+    Button bSetWall;
     ImageView iv;
     Intent i;
     final static int cameraData = 0;
@@ -39,10 +39,10 @@ public class Camera extends Activity implements View.OnClickListener {
 
     private void initialize() {
         iv = (ImageView) findViewById(R.id.ivReturnedPic);
-        ib = (ImageButton) findViewById(R.id.ibTakePic);
-        b = (Button) findViewById(R.id.bSetWallpaper);
-        b.setOnClickListener(this);
-        ib.setOnClickListener(this);
+        bTakePic = (Button) findViewById(R.id.bTakePic);
+        bSetWall = (Button) findViewById(R.id.bSetWallpaper);
+        bSetWall.setOnClickListener(this);
+        bTakePic.setOnClickListener(this);
         myWallpaperManager = WallpaperManager.getInstance(getApplicationContext());
     }
 
@@ -55,7 +55,7 @@ public class Camera extends Activity implements View.OnClickListener {
                     e.printStackTrace();
                 }
             break;
-            case R.id.ibTakePic:
+            case R.id.bTakePic:
                 i = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
                 startActivityForResult(i,cameraData); //Starts Activity and Accepts Return Data. (onActivityResult)
             break;

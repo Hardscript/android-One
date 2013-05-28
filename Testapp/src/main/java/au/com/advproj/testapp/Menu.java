@@ -5,6 +5,7 @@ import android.R;
 import android.app.ListActivity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuInflater;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
@@ -12,7 +13,7 @@ import android.widget.ListView;
 public class Menu extends ListActivity {
 
     //gLocals
-    String classes[] = { "MainActivity", "TextPlay", "Email", "Camera", "example4", "example5" };
+    String classes[] = { "MainActivity", "TextPlay", "Email", "Camera", "Data", "example5" };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,5 +33,10 @@ public class Menu extends ListActivity {
         }catch (ClassNotFoundException e){
             e.printStackTrace();
         }
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(android.view.Menu menu) {
+       return super.onCreateOptionsMenu(menu);
     }
 }
